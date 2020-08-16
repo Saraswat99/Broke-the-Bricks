@@ -24,7 +24,7 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
     private int playerX=310;
     private int ballposX=120;
     private int ballposY=350;
-    private int ballXdir=-3 ;
+    private int ballXdir=-2 ;
     private int ballYdir=-3;
     private MapGenerator map1;
     
@@ -140,7 +140,7 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
             else
             {
                play=true;
-               playerX+=20;
+               playerX+=25;
             }
         }
         else if(e.getKeyCode()==KeyEvent.VK_LEFT)
@@ -150,7 +150,7 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
             else
             {
                 play=true;
-                playerX-=20;
+                playerX-=25;
             }
         }
         else if(e.getKeyCode()==VK_ENTER)
@@ -160,16 +160,12 @@ public class GamePlay extends JPanel implements ActionListener,KeyListener{
             playerX=310;
             ballposX=120;
             ballposY=350;
-            ballXdir=-3;
+            ballXdir=-2;
             ballYdir=-3;
+            totalBricks=21;
             score=0;
             map1=new MapGenerator(3,7);
           }
         }
     }
-
-   
-    
-
-
 }
